@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.141209">
+<testcase classname="Credit Card Payement" name="Payment with valid credit card details" time="0.14051">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at stepDefinitions.Payment_Steps.payment_is_successful(Payment_Steps.java:44)&#13;&#10;&#9;at ✽.Then Payment is successful(Valid Card Payment-1001.feature:16)&#13;&#10;"><![CDATA[And User has items in cart..................................................passed
+Given User is on cart page..................................................passed
+When User enters checkout page..............................................passed
+And User enters name "John".................................................passed
+And User enters number "1234"...............................................passed
+And User enters expiry date "04.19".........................................passed
+And User clicks Send........................................................passed
+Then Payment is successful..................................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at stepDefinitions.Payment_Steps.payment_is_successful(Payment_Steps.java:44)
+	at ✽.Then Payment is successful(Valid Card Payment-1001.feature:16)
+]]></failure>
+</testcase>
+<testcase classname="Credit Card Payement" name="Payment with valid credit card details 2" time="0.000699">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at stepDefinitions.Payment_Steps.payment_is_successful(Payment_Steps.java:44)&#13;&#10;&#9;at ✽.Then Payment is successful(Valid Card Payment-1001.feature:16)&#13;&#10;"><![CDATA[And User has items in cart..................................................passed
+Given User is on cart page..................................................passed
+When User enters checkout page..............................................passed
+And User enters name "Matt".................................................passed
+And User enters number "3322"...............................................passed
+And User enters expiry date "06.20".........................................passed
+And User clicks Send........................................................passed
+Then Payment is successful..................................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at stepDefinitions.Payment_Steps.payment_is_successful(Payment_Steps.java:44)
+	at ✽.Then Payment is successful(Valid Card Payment-1001.feature:16)
+]]></failure>
+</testcase>
+</testsuite>

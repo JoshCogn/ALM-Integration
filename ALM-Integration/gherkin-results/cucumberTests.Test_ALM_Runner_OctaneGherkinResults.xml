@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1"><feature name="Credit Card Payement" path="Feature\Valid Card Payment-1001.feature" started="1537849047714" tag="@TID1001REV0.2.0"><file><![CDATA[#Auto generated Octane revision tag
+@TID1001REV0.2.0
+Feature: Credit Card Payement
+Users can purchase products using a credit card
+
+Background: User is logged in
+And User has items in cart
+
+Scenario Outline: Payment with valid credit card details
+	Given User is on cart page
+    When User enters checkout page
+    And User enters name "<name>"
+    And User enters number "<number>"
+    And User enters expiry date "<expire_date>"
+    And User clicks Send
+    Then Payment is successful
+    
+    Examples:
+    | name | number | expire_date |
+    | John | 1234 | 04.19 |
+    | Matt | 3322 | 06.20 |]]></file><scenarios><background><steps><step duration="0" name="And User has items in cart"/></steps></background><scenario name="Payment with valid credit card details" outlineIndex="1"><steps><step duration="15481" name="Given User is on cart page" status="passed"/><step duration="15481" name="When User enters checkout page" status="passed"/><step duration="2879054" name="And User enters name &quot;John&quot;" status="passed"/><step duration="86844" name="And User enters number &quot;1234&quot;" status="passed"/><step duration="163115" name="And User enters expiry date &quot;04.19&quot;" status="passed"/><step duration="15103" name="And User clicks Send" status="passed"/><step duration="271859" name="Then Payment is successful" status="failed"><error_message><![CDATA[java.lang.AssertionError
+	at stepDefinitions.Payment_Steps.payment_is_successful(Payment_Steps.java:44)
+	at ✽.Then Payment is successful(Valid Card Payment-1001.feature:16)
+]]></error_message></step></steps></scenario><scenario name="Payment with valid credit card details" outlineIndex="2"><steps><step duration="17369" name="Given User is on cart page" status="passed"/><step duration="21522" name="When User enters checkout page" status="passed"/><step duration="99682" name="And User enters name &quot;Matt&quot;" status="passed"/><step duration="181239" name="And User enters number &quot;3322&quot;" status="passed"/><step duration="111387" name="And User enters expiry date &quot;06.20&quot;" status="passed"/><step duration="24542" name="And User clicks Send" status="passed"/><step duration="205782" name="Then Payment is successful" status="failed"><error_message><![CDATA[java.lang.AssertionError
+	at stepDefinitions.Payment_Steps.payment_is_successful(Payment_Steps.java:44)
+	at ✽.Then Payment is successful(Valid Card Payment-1001.feature:16)
+]]></error_message></step></steps></scenario></scenarios></feature></features>

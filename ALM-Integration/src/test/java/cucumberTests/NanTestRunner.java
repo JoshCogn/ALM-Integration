@@ -13,6 +13,6 @@ import cucumber.api.CucumberOptions;
 		,tags = {"@Initial"}
 		)
 
-public class TestRunner {
+public class NanTestRunner {
 
 }

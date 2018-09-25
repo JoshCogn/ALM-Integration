@@ -19,7 +19,7 @@ public class General_Steps {
 	
 	WebDriver driver;
 	
-	@Before
+	@Before("@Initial")
 	public void beforeTest() {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\695136\\Software\\chromedriver_win32\\chromedriver.exe");
@@ -27,7 +27,7 @@ public class General_Steps {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
 	}
 	
-	@After
+	@After("@Initial")
 	public void afterTest() {
 		driver.close();
 	}
